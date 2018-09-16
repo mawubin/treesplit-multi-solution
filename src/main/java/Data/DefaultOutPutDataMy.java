@@ -10,7 +10,12 @@ import org.uma.jmetal.util.fileoutput.FileOutputContext;
 
 public class DefaultOutPutDataMy implements FileOutputContext {
 
-	 private static final String DEFAULT_SEPARATOR = " " ;
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private static final String DEFAULT_SEPARATOR = " " ;
 
 	  protected String fileName;
 	  protected String separator;
@@ -20,7 +25,6 @@ public class DefaultOutPutDataMy implements FileOutputContext {
 	    this.separator = DEFAULT_SEPARATOR ;
 	  }
 
-	  @Override
 	  public BufferedWriter getFileWriter() {
 	    FileOutputStream outputStream ;
 	    try {
@@ -33,17 +37,14 @@ public class DefaultOutPutDataMy implements FileOutputContext {
 	    return new BufferedWriter(outputStreamWriter);
 	  }
 
-	  @Override
 	  public String getSeparator() {
 	    return separator;
 	  }
 
-	  @Override
 	  public void setSeparator(String separator) {
 	    this.separator = separator;
 	  }
 
-	  @Override
 	  public String getFileName() {
 	    return fileName ;
 	  }
